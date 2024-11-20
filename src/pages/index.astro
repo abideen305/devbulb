@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+---
+
+<Layout title="Devbulb Data - Data-Driven Insights & Media Strategy">
+  <main>
+    <!-- Hero Section -->
+    <div class="bg-devbulb-blue text-white py-20 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center"></div>
+      <div class="container mx-auto px-4 text-center relative z-10">
+        <h1 class="text-5xl font-bold mb-6">
+          Empowering Organisations with <span class="text-devbulb-orange">Data-Driven</span> Insights
+        </h1>
+        <p class="text-xl max-w-3xl mx-auto mb-8">
+          We bridge the gap between data, media, and strategy to drive business growth and visibility.
+        </p>
+        <a href="/services" class="bg-devbulb-orange text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors inline-block">
+          Explore Our Services
+        </a>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <Section title="About Us" id="about">
+      <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div>
+          <img 
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+            alt="Data analysis team" 
+            class="rounded-lg shadow-lg w-full h-[400px] object-cover"
+          />
+        </div>
+        <div>
+          <p class="text-gray-600 mb-6">
+            At Devbulb Data, we empower businesses and professionals by bridging the gap between data,
+            media, and strategy. Our expertise lies in equipping organisations with cutting-edge data
+            solutions and media strategies that drive business growth and visibility.
+          </p>
+          <p class="text-gray-600">
+            We deliver top-tier training and consultancy to corporations, educational institutions, and young
+            professionals, providing them with the tools they need to excel in a data-driven world.
+          </p>
+        </div>
+      </div>
+    </Section>
+
+    <!-- Services Preview Section -->
+    <Section title="Our Services" id="services" bgColor="bg-gray-50">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <ServiceCard
+          title="Data Training and Development"
+          description="Comprehensive training programs tailored to help organisations harness the power of data."
+          icon="/images/icons/training.svg"
+        />
+        <ServiceCard
+          title="Content Strategy"
+          description="Craft effective content strategies aligned with data insights for maximum impact."
+          icon="/images/icons/strategy.svg"
+        />
+        <ServiceCard
+          title="Media Placement"
+          description="Strategic media placements leveraging digital and traditional platforms for growth."
+          icon="/images/icons/media.svg"
+        />
+        <ServiceCard
+          title="Web Development & SEO"
+          description="Create eye-catching websites and improve search visibility through content marketing."
+          icon="/images/icons/web.svg"
+        />
+      </div>
+      <div class="text-center mt-8">
+        <a href="/services" class="inline-block bg-devbulb-blue text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors">
+          View All Services
+        </a>
+      </div>
+    </Section>
+
+    <!-- Testimonials Section -->
+    <Section title="Client Testimonials" id="testimonials">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <TestimonialCard
+          name="Sarah Johnson"
+          role="Data Analytics Manager"
+          company="Tech Solutions Inc."
+          content="Devbulb Data transformed our approach to data analytics. Their training programs are comprehensive and practical, delivering real value to our team."
+          image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        />
+        <TestimonialCard
+          name="Michael Chen"
+          role="Marketing Director"
+          company="Global Media Group"
+          content="The media strategy developed by Devbulb Data helped us achieve unprecedented growth. Their data-driven approach to content creation is revolutionary."
+          image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        />
+        <TestimonialCard
+          name="Amanda Peters"
+          role="CEO"
+          company="StartUp Innovations"
+          content="Working with Devbulb Data was a game-changer for our startup. Their SEO and web development services significantly improved our online presence."
+          image="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        />
+      </div>
+    </Section>
+
+    <!-- Contact Section -->
+    <Section title="Contact Us" id="contact" bgColor="bg-gray-50">
+      <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div>
+          <img 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+            alt="Contact us" 
+            class="rounded-lg shadow-lg w-full h-[400px] object-cover"
+          />
+        </div>
+        <div class="text-center md:text-left">
+          <p class="text-xl mb-6">
+            Get in touch with us today to learn more about how Devbulb Data can help your organisation
+            thrive in the digital age.
+          </p>
+          <div class="space-y-4">
+            <p class="text-lg flex items-center justify-center md:justify-start">
+              <img src="/images/icons/phone.svg" alt="Phone" class="w-6 h-6 mr-2" />
+              <span class="font-semibold">Phone:</span>
+              <a href="tel:+2347038888337" class="text-devbulb-orange hover:underline ml-2">+2347038888337</a>
+            </p>
+            <p class="text-lg flex items-center justify-center md:justify-start">
+              <img src="/images/icons/location.svg" alt="Location" class="w-6 h-6 mr-2" />
+              <span class="font-semibold">Location:</span>
+              <span class="ml-2">Agege, Nigeria</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </Section>
+  </main>
+</Layout>

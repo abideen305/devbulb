@@ -1,0 +1,51 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Devbulb Data - Empowering Organisations with Data-Driven Insights and Media Strategy" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50">
+    <nav class="bg-devbulb-blue text-white py-4 sticky top-0 z-50">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-2">
+          <img src="/images/logo.svg" alt="Devbulb Data Logo" class="w-8 h-8" />
+          <span class="text-2xl font-bold">Devbulb Data</span>
+        </a>
+        <div class="space-x-6">
+          <a href="/" class="hover:text-devbulb-orange">Home</a>
+          <a href="/services" class="hover:text-devbulb-orange">Services</a>
+          <a href="/#testimonials" class="hover:text-devbulb-orange">Testimonials</a>
+          <a href="/#contact" class="hover:text-devbulb-orange">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <slot />
+    <footer class="bg-devbulb-blue text-white py-8 mt-16">
+      <div class="container mx-auto px-4 text-center">
+        <div class="flex justify-center items-center space-x-2 mb-4">
+          <img src="/images/logo.svg" alt="Devbulb Data Logo" class="w-8 h-8" />
+          <span class="text-xl font-bold">Devbulb Data</span>
+        </div>
+        <p>© {new Date().getFullYear()} Devbulb Data. All rights reserved.</p>
+        <p class="mt-2">Agege, Nigeria | +2347038888337</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

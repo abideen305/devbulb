@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+
+const services = [
+  {
+    title: "Data Training and Development",
+    description: "Our comprehensive training programs are designed to help organizations harness the power of data effectively. We offer:",
+    features: [
+      "Custom corporate training programs",
+      "Data analysis workshops",
+      "Business intelligence training",
+      "Data visualization courses",
+      "Advanced analytics training"
+    ]
+  },
+  {
+    title: "Content Strategy",
+    description: "We help businesses create and implement effective content strategies that drive engagement and growth:",
+    features: [
+      "Content audit and analysis",
+      "Strategy development",
+      "Content calendar planning",
+      "Performance tracking",
+      "Content optimization"
+    ]
+  },
+  {
+    title: "Media Placement",
+    description: "Strategic media placement services to maximize your brand's visibility and impact:",
+    features: [
+      "Digital media planning",
+      "Traditional media strategy",
+      "Campaign optimization",
+      "ROI tracking",
+      "Cross-platform integration"
+    ]
+  },
+  {
+    title: "Web Development & SEO",
+    description: "Complete web solutions to establish and enhance your online presence:",
+    features: [
+      "Custom website development",
+      "SEO optimization",
+      "Performance optimization",
+      "Mobile responsiveness",
+      "Analytics integration"
+    ]
+  }
+];
+---
+
+<Layout title="Our Services - Devbulb Data">
+  <main>
+    <!-- Hero Section -->
+    <div class="bg-devbulb-blue text-white py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-4">Our Services</h1>
+        <p class="text-xl max-w-2xl mx-auto">
+          Comprehensive data and media solutions tailored to your organization's needs
+        </p>
+      </div>
+    </div>
+
+    <!-- Detailed Services Section -->
+    <Section title="What We Offer" id="services">
+      <div class="space-y-12">
+        {services.map((service) => (
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-2xl font-semibold text-devbulb-blue mb-4">{service.title}</h3>
+            <p class="text-gray-600 mb-6">{service.description}</p>
+            <ul class="grid md:grid-cols-2 gap-4">
+              {service.features.map((feature) => (
+                <li class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-devbulb-orange mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </Section>
+
+    <!-- CTA Section -->
+    <Section title="Ready to Get Started?" id="cta" bgColor="bg-gray-50">
+      <div class="text-center">
+        <p class="text-xl text-gray-600 mb-8">
+          Contact us today to discuss how we can help your organization leverage data and media for growth.
+        </p>
+        <a href="/#contact" class="inline-block bg-devbulb-orange text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors">
+          Contact Us
+        </a>
+      </div>
+    </Section>
+  </main>
+</Layout>
