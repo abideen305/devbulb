@@ -3,18 +3,26 @@ import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
+import MediaSection from '../components/MediaSection.astro';
 ---
 
 <Layout title="Devbulb Data - Data-Driven Insights & Media Strategy">
   <main>
     <!-- Hero Section -->
     <div class="bg-devbulb-blue text-white py-20 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center"></div>
+      <div class="absolute inset-0">
+        <img 
+          src="https://i.ibb.co/vQ5hHYm/woman-7004825-1280.jpg" 
+          alt="Hero background" 
+          class="w-full h-full object-cover opacity-20"
+        />
+        <div class="absolute inset-0 bg-devbulb-blue/60"></div>
+      </div>
       <div class="container mx-auto px-4 text-center relative z-10">
-        <h1 class="text-5xl font-bold mb-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
           Empowering Organisations with <span class="text-devbulb-orange">Data-Driven</span> Insights
         </h1>
-        <p class="text-xl max-w-3xl mx-auto mb-8">
+        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
           We bridge the gap between data, media, and strategy to drive business growth and visibility.
         </p>
         <a href="/services" class="bg-devbulb-orange text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors inline-block">
@@ -53,22 +61,22 @@ import TestimonialCard from '../components/TestimonialCard.astro';
         <ServiceCard
           title="Data Training and Development"
           description="Comprehensive training programs tailored to help organisations harness the power of data."
-          icon="/images/icons/training.svg"
+          icon="https://cdn-icons-png.flaticon.com/512/2436/2436874.png"
         />
         <ServiceCard
           title="Content Strategy"
           description="Craft effective content strategies aligned with data insights for maximum impact."
-          icon="/images/icons/strategy.svg"
+          icon="https://cdn-icons-png.flaticon.com/512/2910/2910791.png"
         />
         <ServiceCard
           title="Media Placement"
           description="Strategic media placements leveraging digital and traditional platforms for growth."
-          icon="/images/icons/media.svg"
+          icon="https://cdn-icons-png.flaticon.com/512/1968/1968666.png"
         />
         <ServiceCard
           title="Web Development & SEO"
           description="Create eye-catching websites and improve search visibility through content marketing."
-          icon="/images/icons/web.svg"
+          icon="https://cdn-icons-png.flaticon.com/512/1336/1336494.png"
         />
       </div>
       <div class="text-center mt-8">
@@ -79,41 +87,56 @@ import TestimonialCard from '../components/TestimonialCard.astro';
     </Section>
 
     <!-- Testimonials Section -->
-    <Section title="Client Testimonials" id="testimonials">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <Section title="Client Testimonials" id="testimonials" bgColor="bg-devbulb-blue" textColor="text-white">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <TestimonialCard
-          name="Sarah Johnson"
-          role="Data Analytics Manager"
-          company="Tech Solutions Inc."
-          content="Devbulb Data transformed our approach to data analytics. Their training programs are comprehensive and practical, delivering real value to our team."
-          image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-        />
-        <TestimonialCard
-          name="Michael Chen"
-          role="Marketing Director"
-          company="Global Media Group"
-          content="The media strategy developed by Devbulb Data helped us achieve unprecedented growth. Their data-driven approach to content creation is revolutionary."
+          name="Oluwaseun Adebayo"
+          role="Head of Data Analytics"
+          company="FirstBank Nigeria"
+          content="Devbulb Data's training transformed our data analytics capabilities. Their practical approach and deep understanding of the Nigerian market made all the difference."
           image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
         />
         <TestimonialCard
-          name="Amanda Peters"
+          name="Chioma Okonkwo"
+          role="Marketing Director"
+          company="MTN Nigeria"
+          content="Their media strategy helped us achieve remarkable growth in our digital campaigns. The data-driven approach to content creation was exactly what we needed."
+          image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        />
+        <TestimonialCard
+          name="Ibrahim Yusuf"
           role="CEO"
-          company="StartUp Innovations"
-          content="Working with Devbulb Data was a game-changer for our startup. Their SEO and web development services significantly improved our online presence."
-          image="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+          company="TechNova Solutions"
+          content="As a growing Nigerian startup, Devbulb Data's SEO and web development services significantly improved our online presence and market reach."
+          image="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        />
+        <TestimonialCard
+          name="Babajide Ogunlesi"
+          role="Media Director"
+          company="Channels Television"
+          content="Devbulb Data's innovative approach to media analytics has revolutionized how we handle data-driven broadcasting decisions."
+          image="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
         />
       </div>
+    </Section>
+
+    <!-- Featured In Section -->
+    <Section title="Featured In" id="media">
+      <MediaSection />
     </Section>
 
     <!-- Contact Section -->
     <Section title="Contact Us" id="contact" bgColor="bg-gray-50">
       <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-        <div>
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-            alt="Contact us" 
-            class="rounded-lg shadow-lg w-full h-[400px] object-cover"
-          />
+        <div class="h-[400px] rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3!2d3.3!3d6.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9228fa2a3999%3A0x3b06c2f45c0a0477!2s20%20Arigbanla%20St%2C%20Orile%20Agege%2C%20Lagos!5e0!3m2!1sen!2sng!4v1"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
         <div class="text-center md:text-left">
           <p class="text-xl mb-6">
@@ -122,14 +145,14 @@ import TestimonialCard from '../components/TestimonialCard.astro';
           </p>
           <div class="space-y-4">
             <p class="text-lg flex items-center justify-center md:justify-start">
-              <img src="/images/icons/phone.svg" alt="Phone" class="w-6 h-6 mr-2" />
+              <img src="https://cdn-icons-png.flaticon.com/512/126/126341.png" alt="Phone" class="w-6 h-6 mr-2" />
               <span class="font-semibold">Phone:</span>
               <a href="tel:+2347038888337" class="text-devbulb-orange hover:underline ml-2">+2347038888337</a>
             </p>
             <p class="text-lg flex items-center justify-center md:justify-start">
-              <img src="/images/icons/location.svg" alt="Location" class="w-6 h-6 mr-2" />
-              <span class="font-semibold">Location:</span>
-              <span class="ml-2">Agege, Nigeria</span>
+              <img src="https://cdn-icons-png.flaticon.com/512/927/927667.png" alt="Location" class="w-6 h-6 mr-2" />
+              <span class="font-semibold">Address:</span>
+              <span class="ml-2">20, ARIGBANLA STREET, ORILE AGEGE</span>
             </p>
           </div>
         </div>

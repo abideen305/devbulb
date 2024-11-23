@@ -1,0 +1,72 @@
+---
+const mediaPartners = [
+  {
+    name: "BusinessDay",
+    logo: "https://i.ibb.co/c64RQDW/businessday.png",
+    headline: "Firms Partner to Transform Agribusiness",
+    featuredImage: "https://i.ibb.co/C1QnhBZ/download-1-12.jpg",
+    url: "https://businessday.ng/companies/article/firms-partner-to-transform-agribusiness/"
+  },
+  {
+    name: "The Guardian",
+    logo: "https://i.ibb.co/Tbjqs2N/guardian-conscience-2x.webp",
+    headline: "Firms Collaborate to Revolutionise Agribusiness",
+    featuredImage: "https://i.ibb.co/KsdRfRY/agribusiness-1.jpg",
+    url: "https://guardian.ng/features/agro-care/firms-collaborate-to-revolutionise-agribusiness/"
+  },
+  {
+    name: "PM News",
+    logo: "https://i.ibb.co/VgQrTZr/logo.png",
+    headline: "Devbulb Data, Motofa Resources Partner to Revolutionize Agribusiness",
+    featuredImage: "https://i.ibb.co/C1QnhBZ/download-1-12.jpg",
+    url: "https://pmnewsnigeria.com/2024/11/13/devbulb-data-motofa-resources-partner-to-revolutionize-agribusiness/"
+  },
+  {
+    name: "The Nation",
+    logo: "https://i.ibb.co/GCBd60d/The-Niche-Logo-300x62-300x62.png",
+    headline: "Devbulb Data, Motofa Partner on Supporting Businesses with Agribusiness Data",
+    featuredImage: "https://i.ibb.co/KsdRfRY/agribusiness-1.jpg",
+    url: "https://thenicheng.com/devbulb-data-motofa-partner-on-supporting-businesses-with-agribusiness-data/"
+  },
+  {
+    name: "Independent",
+    logo: "https://i.ibb.co/nBnkT3Y/INL-MASTHEAD-Logo-scaled.jpg",
+    headline: "Devbulb Data, Motofa Resources Partner to Revolutionize Agribusiness",
+    featuredImage: "https://i.ibb.co/C1QnhBZ/download-1-12.jpg",
+    url: "https://independent.ng/devbulb-data-motofa-resources-partner-to-revolutionize-agribusiness/"
+  }
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {mediaPartners.map(partner => (
+    <a 
+      href={partner.url} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+    >
+      <div class="p-4 border-b">
+        <img 
+          src={partner.logo} 
+          alt={`${partner.name} Logo`} 
+          class="h-12 object-contain mx-auto"
+          loading="lazy"
+        />
+      </div>
+      <div class="aspect-video overflow-hidden">
+        <img 
+          src={partner.featuredImage} 
+          alt={`Featured image for ${partner.name} article`}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-devbulb-blue hover:text-devbulb-orange transition-colors">
+          {partner.headline}
+        </h3>
+      </div>
+    </a>
+  ))}
+</div>
