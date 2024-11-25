@@ -30,7 +30,7 @@ const mobileMenuScript = `
     <nav class="bg-devbulb-blue text-white py-2 sticky top-0 z-50">
       <div class="container mx-auto px-4 flex justify-between items-center">
         <a href="/" class="flex items-center space-x-3">
-          <img src="https://i.ibb.co/qWkWt81/dev.jpg" alt="Devbulb Data Logo" class="h-8" />
+          <img src="https://i.ibb.co/qWkWt81/dev.jpg" alt="Devbulb Data Logo" class="h-6" />
           <span class="font-semibold text-lg">Devbulb Data</span>
         </a>
         <div class="hidden md:flex space-x-6">
@@ -59,11 +59,15 @@ const mobileMenuScript = `
     <footer class="bg-devbulb-blue text-white py-8 mt-16">
       <div class="container mx-auto px-4 text-center">
         <div class="flex justify-center items-center space-x-3 mb-4">
-          <img src="https://i.ibb.co/qWkWt81/dev.jpg" alt="Devbulb Data Logo" class="h-8" />
+          <img src="https://i.ibb.co/qWkWt81/dev.jpg" alt="Devbulb Data Logo" class="h-6" />
           <span class="font-semibold text-lg">Devbulb Data</span>
         </div>
         <p>© {new Date().getFullYear()} Devbulb Data. All rights reserved.</p>
-        <p class="mt-2">20, ARIGBANLA STREET, ORILE AGEGE | +2347038888337</p>
+        <div class="mt-2 space-x-4">
+          <a href="tel:+2347038888337" class="hover:text-devbulb-orange">+2347038888337</a>
+          <span>|</span>
+          <a href="mailto:info@devbulbdata.com" class="hover:text-devbulb-orange">info@devbulbdata.com</a>
+        </div>
       </div>
     </footer>
     <script set:html={mobileMenuScript} />

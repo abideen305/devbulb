@@ -31,12 +31,38 @@ import MediaSection from '../components/MediaSection.astro';
       </div>
     </div>
 
+    <!-- What We Solve Section -->
+    <Section title="What We Solve" id="solutions" bgColor="bg-white">
+      <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div class="order-2 md:order-1">
+          <div class="space-y-6 text-gray-600">
+            <p>
+              In today's fast-paced business environment, leveraging data is key to staying ahead. We help forward-thinking companies unlock the true potential of data by turning trends and insights into actionable strategies.
+            </p>
+            <p>
+              Our media expertise further enhances organisational visibility, making data and media powerful assets for growth. By simplifying access to data and transforming it into easy-to-use formats, we enable businesses to make informed decisions faster.
+            </p>
+            <p>
+              We address the critical challenges faced by organisations—how to scale, adapt, and innovate in a world where data and media are central to success.
+            </p>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <img 
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            alt="Data Solutions"
+            class="rounded-lg shadow-lg w-full h-[400px] object-cover"
+          />
+        </div>
+      </div>
+    </Section>
+
     <!-- About Section -->
     <Section title="About Us" id="about">
       <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
         <div>
           <img 
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
             alt="Data analysis team" 
             class="rounded-lg shadow-lg w-full h-[400px] object-cover"
           />
@@ -86,7 +112,7 @@ import MediaSection from '../components/MediaSection.astro';
       </div>
     </Section>
 
-    <!-- Testimonials Section -->
+    {/* Testimonials Section - Commented out as requested
     <Section title="Client Testimonials" id="testimonials" bgColor="bg-devbulb-blue" textColor="text-white">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <TestimonialCard
@@ -119,6 +145,7 @@ import MediaSection from '../components/MediaSection.astro';
         />
       </div>
     </Section>
+    */}
 
     <!-- Featured In Section -->
     <Section title="Featured In" id="media">
@@ -150,9 +177,9 @@ import MediaSection from '../components/MediaSection.astro';
               <a href="tel:+2347038888337" class="text-devbulb-orange hover:underline ml-2">+2347038888337</a>
             </p>
             <p class="text-lg flex items-center justify-center md:justify-start">
-              <img src="https://cdn-icons-png.flaticon.com/512/927/927667.png" alt="Location" class="w-6 h-6 mr-2" />
-              <span class="font-semibold">Address:</span>
-              <span class="ml-2">20, ARIGBANLA STREET, ORILE AGEGE</span>
+              <img src="https://cdn-icons-png.flaticon.com/512/552/552486.png" alt="Email" class="w-6 h-6 mr-2" />
+              <span class="font-semibold">Email:</span>
+              <a href="mailto:info@devbulbdata.com" class="text-devbulb-orange hover:underline ml-2">info@devbulbdata.com</a>
             </p>
           </div>
         </div>
